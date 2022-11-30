@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Facture{% endblock %}
+
+{% block body %}
+    {# Coordonnées de l'entreprise à gauche, coordonnées du client à droite#}
+    <div class="container mt-4">
+        <table class="table">
+            <thead class="bg-secondary text-white">
+                <th class="col-6">Slug</th>
+                <th style="text-align: center">Title</th>
+                <th style="text-align: center">Exerpt</th>
+                <th style="text-align: center">Content</th>
+            </thead>
+            <tbody>
+            {% for post in liste %}
+                <tr>
+                    <td> {{ post.Slug }} </td>
+                    <td> {{ post.Title }}</td>
+                    <td> {{ post.Excerpt }}</td>
+                    <td> {{ post.Content }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
